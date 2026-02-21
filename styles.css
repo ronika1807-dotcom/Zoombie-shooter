@@ -1,0 +1,38 @@
+/* styles.css - Ultimate Zombie Shooter */
+:root{
+  --bg:#070707; --panel:rgba(0,0,0,0.55); --accent:#e11d48; --muted:#9ca3af;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#fff;font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
+canvas{display:block;margin:8px auto;background:#0b0b0b;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,0.6)}
+#ui{position:fixed;left:0;right:0;top:0;pointer-events:none}
+.top-left,.top-right{position:fixed;top:12px;display:flex;gap:10px;align-items:center}
+.top-left{left:12px}
+.top-right{right:12px}
+#score,#coins,#hp,#level,#weapon,#ammo{background:var(--panel);padding:6px 10px;border-radius:8px;font-size:14px;pointer-events:none}
+.overlay{position:fixed;left:0;right:0;top:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.75));pointer-events:auto}
+#centerOverlay h1{font-size:40px;margin:0 0 8px}
+#centerOverlay p{margin:0 0 12px;color:var(--muted)}
+#startBtn,#shopBtn,#closeShop{padding:10px 14px;margin:6px;border-radius:8px;border:none;background:#111;color:#fff;cursor:pointer}
+#startBtn:hover,#shopBtn:hover,#closeShop:hover{background:#222}
+.hidden{display:none}
+
+/* Shop layout */
+#shop{padding:20px;gap:12px}
+#shopItems{display:flex;flex-wrap:wrap;gap:12px;max-width:760px;justify-content:center}
+.shop-item{background:rgba(255,255,255,0.03);padding:12px;border-radius:8px;width:220px;text-align:left}
+.shop-item button{margin-top:8px;padding:6px 10px;border-radius:6px;border:none;background:#111;color:#fff;cursor:pointer}
+
+/* Mobile controls */
+.mobile{position:fixed;bottom:18px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:flex-end;pointer-events:auto}
+#joystick{width:120px;height:120px;background:rgba(255,255,255,0.03);border-radius:999px;touch-action:none}
+.mobile-btn{background:#111;padding:14px 18px;border-radius:10px;cursor:pointer}
+
+/* HUD small screens */
+@media (max-width:900px){
+  canvas{width:100%;height:auto}
+  .mobile{display:flex}
+  .overlay{font-size:14px}
+  #centerOverlay h1{font-size:28px}
+  #mobile-controls.hidden {display:flex}
+}

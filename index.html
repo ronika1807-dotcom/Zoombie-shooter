@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zombie Shooter — Ultimate</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="ui">
+    <div class="top-left">
+      <div id="score">Score: 0</div>
+      <div id="coins">Coins: 0</div>
+      <div id="level">Level: 1</div>
+    </div>
+
+    <div class="top-right">
+      <div id="hp">HP: 100</div>
+      <div id="weapon">Weapon: Pistol</div>
+      <div id="ammo">Ammo: 0/0</div>
+    </div>
+
+    <div id="centerOverlay" class="overlay">
+      <h1>Zombie Shooter — Ultimate</h1>
+      <p>WASD / Arrow to move • Aim with mouse • Click to shoot</p>
+      <div class="controls-hint">1-6 to switch weapons • R to reload • Enter to start / restart</div>
+      <div style="margin-top:12px">
+        <button id="startBtn">Start Game</button>
+        <button id="shopBtn">Open Shop</button>
+      </div>
+    </div>
+
+    <div id="shop" class="overlay hidden">
+      <h2>Shop</h2>
+      <div id="shopItems"></div>
+      <button id="closeShop">Close Shop</button>
+    </div>
+
+    <!-- Mobile Controls -->
+    <div id="mobile-controls" class="mobile hidden">
+      <div id="joystick"></div>
+      <div id="fireBtn" class="mobile-btn">FIRE</div>
+      <div id="reloadBtn" class="mobile-btn">RELOAD</div>
+    </div>
+  </div>
+
+  <canvas id="game" width="900" height="600"></canvas>
+
+  <script src="game.js"></script>
+</body>
+</html>
